@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class Pincipalpage extends StatelessWidget {
@@ -6,7 +5,11 @@ class Pincipalpage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: Principal(
+      ),
+    );
   }
 }
 
@@ -20,6 +23,26 @@ class Principal extends StatefulWidget {
 class _PrincipalState extends State<Principal> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      body: SafeArea(
+        child: Column(
+          Children: <Widget> [
+            minimum: const EdgeInsets.symmetric(vetical: 10),
+            Container(
+              child: ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  minimumSize: Size(200,200),
+                  
+                ),
+                onPressed: (){
+
+                },
+                child: Text(),
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
   }
 }
