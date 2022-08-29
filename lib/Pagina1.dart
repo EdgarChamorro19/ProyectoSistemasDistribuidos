@@ -29,6 +29,10 @@ class _PrincipalState extends State<Principal> {
           Children: <Widget> [
             minimum: const EdgeInsets.symmetric(vetical: 10),
             Container(
+            ),
+            Container(
+            ),
+            Container(
               child: ElevatedButton(
                 style: ElevatedButton.styleFrom(
                   minimumSize: Size(200,200),
