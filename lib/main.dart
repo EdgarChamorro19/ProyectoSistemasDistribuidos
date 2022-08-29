@@ -54,7 +54,7 @@ class _InicioState extends State<Inicio> {
                   ),
                 ),
                 onPressed: (){
-
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=> Pincipalpage()));
                 },
                 child: Text("Jugar",style: TextStyle(fontWeight: FontWeight.bold, fontSize:15)),
               ),
