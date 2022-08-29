@@ -34,18 +34,18 @@ class _InicioState extends State<Inicio> {
           children: <Widget> [
             Flexible(
               child: Container(
-       
-                child: Image.asset("imagenes/imginicio.png",height: 350,),
+                margin: EdgeInsets.symmetric(horizontal:20 ,vertical:50),
+                child: Image.asset("imagenes/img4.png",height: 325,),
               ),
             ),
             Container(
-              margin: EdgeInsets.symmetric(horizontal: 30,vertical: 10),
+              margin: EdgeInsets.symmetric(horizontal: 30,vertical: 15),
               child: Text("Bienvenidos a Nuestra Aplicacion",
                       style: TextStyle(fontWeight: FontWeight.bold, fontSize:30)
                       ),
             ),
             Container(
-              margin: EdgeInsets.symmetric(horizontal: 30,vertical: 15),
+              margin: EdgeInsets.symmetric(horizontal: 30,vertical: 20),
               child: ElevatedButton(
                 style: ElevatedButton.styleFrom(
                   minimumSize: Size(340, 55),
