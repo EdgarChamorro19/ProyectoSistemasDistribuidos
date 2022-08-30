@@ -35,12 +35,6 @@ class _PrincipalState extends State<Principal> {
               ),
             ),
             Container(
-              margin: EdgeInsets.symmetric(horizontal: 30,vertical: 15),
-              child: Text("Bienvenidos a Nuestra Aplicacion",
-                      style: TextStyle(fontWeight: FontWeight.bold, fontSize:30)
-                      ),
-            ),
-            Container(
               margin: EdgeInsets.symmetric(horizontal: 30,vertical: 20),
               child: ElevatedButton(
                 style: ElevatedButton.styleFrom(
