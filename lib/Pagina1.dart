@@ -25,28 +25,39 @@ class _PrincipalState extends State<Principal> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
+        minimum: const EdgeInsets.symmetric(vertical: 10),
         child: Column(
-          Children: <Widget> [
-            minimum: const EdgeInsets.symmetric(vetical: 10),
-            Container(
+          children: <Widget> [
+            Flexible(
+              child: Container(
+                margin: EdgeInsets.symmetric(horizontal:20 ,vertical:50),
+                child: Image.asset("imagenes/img4.png",height: 325,),
+              ),
             ),
             Container(
+              margin: EdgeInsets.symmetric(horizontal: 30,vertical: 15),
+              child: Text("Bienvenidos a Nuestra Aplicacion",
+                      style: TextStyle(fontWeight: FontWeight.bold, fontSize:30)
+                      ),
             ),
             Container(
+              margin: EdgeInsets.symmetric(horizontal: 30,vertical: 20),
               child: ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                  minimumSize: Size(200,200),
-                  
+                  minimumSize: Size(340, 55),
+                  shape: const RoundedRectangleBorder(
+                    borderRadius: BorderRadius.all(Radius.circular(13))
+                  ),
                 ),
                 onPressed: (){
-
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=> Pincipalpage()));
                 },
-                child: Text(),
+                child: Text("Jugar",style: TextStyle(fontWeight: FontWeight.bold, fontSize:15)),
               ),
             ),
           ],
-        ),
-      ),
+        )
+      )
     );
   }
 }
