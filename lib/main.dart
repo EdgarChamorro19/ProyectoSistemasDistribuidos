@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:trivia_app/Pagina1.dart';
 
 void main() {
   runApp(const MyApp());
@@ -34,18 +35,18 @@ class _InicioState extends State<Inicio> {
           children: <Widget> [
             Flexible(
               child: Container(
-                margin: EdgeInsets.symmetric(horizontal:20 ,vertical:50),
+                margin: const EdgeInsets.symmetric(horizontal:20 ,vertical:50),
                 child: Image.asset("imagenes/img4.png",height: 325,),
               ),
             ),
             Container(
-              margin: EdgeInsets.symmetric(horizontal: 30,vertical: 15),
-              child: Text("Bienvenidos a Nuestra Aplicacion",
+              margin: const EdgeInsets.symmetric(horizontal: 30,vertical: 15),
+              child: const Text("Bienvenidos a Nuestra Aplicacion",
                       style: TextStyle(fontWeight: FontWeight.bold, fontSize:30)
                       ),
             ),
             Container(
-              margin: EdgeInsets.symmetric(horizontal: 30,vertical: 20),
+              margin: const EdgeInsets.symmetric(horizontal: 30,vertical: 20),
               child: ElevatedButton(
                 style: ElevatedButton.styleFrom(
                   minimumSize: Size(340, 55),
@@ -54,9 +55,9 @@ class _InicioState extends State<Inicio> {
                   ),
                 ),
                 onPressed: (){
-                  Navigator.push(context, MaterialPageRoute(builder: (context)=> Pincipalpage()));
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=> Principal()));
                 },
-                child: Text("Jugar",style: TextStyle(fontWeight: FontWeight.bold, fontSize:15)),
+                child: const Text("Jugar",style: TextStyle(fontWeight: FontWeight.bold, fontSize:15)),
               ),
             ),
           ],
