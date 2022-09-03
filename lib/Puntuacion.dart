@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:trivia_app/second_page.dart';
-import 'package:google_fonts/google_fonts.dart';
+
 
 class Puntuacion extends StatefulWidget {
   final List useranswerlist;
@@ -61,13 +61,13 @@ class _PuntuacionState extends State<Puntuacion> {
                   Center(
                     child: Text(
                       "Score",
-                      style: GoogleFonts.lato(textStyle: body, fontSize: 30),
+                      style: TextStyle(fontSize: 30),
                     ),
                   ),
                   Center(
                     child: Text(
                       '${count} / ${total}',
-                      style: GoogleFonts.lato(textStyle: body, fontSize: 28),
+                      style: TextStyle(fontSize: 28),
                     ),
                   ),
                 ],
@@ -94,7 +94,7 @@ class _PuntuacionState extends State<Puntuacion> {
                   },
                   child: Text(
                     'Retake Test',
-                    style: GoogleFonts.lato(textStyle: body, fontSize: 20),
+                    style: TextStyle(fontSize: 20),
                   ),
                 ),
               ),

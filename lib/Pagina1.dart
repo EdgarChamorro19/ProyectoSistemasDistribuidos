@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:trivia_app/Pagina2.dart';
+import 'package:trivia_app/second_page.dart';
 
 class Pincipalpage extends StatelessWidget {
   const Pincipalpage({Key? key}) : super(key: key);
@@ -44,7 +46,7 @@ class _PrincipalState extends State<Principal> {
                   ),
                 ),
                 onPressed: (){
-                  Navigator.push(context, MaterialPageRoute(builder: (context)=> Pincipalpage()));
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=> SecondPage()));
                 },
                 child: Text("Jugar",style: TextStyle(fontWeight: FontWeight.bold, fontSize:15)),
               ),

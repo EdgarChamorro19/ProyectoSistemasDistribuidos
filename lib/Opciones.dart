@@ -7,7 +7,7 @@ class Opciones extends StatefulWidget {
   final OptionSelectedCallback onOptionsSelected;
   final int selectedPosition;
   final int index;
-  //List finalWrongrightlist = [];
+
   Opciones({
     required this.wrongRightList,
     required this.onOptionsSelected,
