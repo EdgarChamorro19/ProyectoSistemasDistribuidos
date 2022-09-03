@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:trivia_app/Model/Respuestas.dart';
-import 'package:trivia_app/Pagina2.dart';
+import 'package:trivia_app/VerPreguntas.dart';
 
 class Opciones extends StatefulWidget {
   final List wrongRightList;
@@ -32,7 +32,7 @@ class _OpcionesState extends State<Opciones> {
     //     wrongright: widget.wrongright);
     // a.mix();
     selectedIndex = widget.selectedPosition;
-    print("positio here is $selectedIndex");
+    print("positioN here is $selectedIndex");
   }
 
   @override
@@ -45,9 +45,9 @@ class _OpcionesState extends State<Opciones> {
             elevation: 2,
             margin: EdgeInsets.symmetric(vertical: 6),
             child: CheckboxListTile(
-              checkColor: Colors.blueGrey[800],
-              activeColor: Colors.blueGrey[100],
-              selectedTileColor: Colors.blueGrey[800],
+              checkColor: Colors.white,
+              activeColor: Colors.cyan,
+              selectedTileColor: Colors.white,
               selected: selectedIndex == position,
               title: Text(
                   '${widget.wrongRightList[widget.index].elementAt(position)}'),
@@ -58,7 +58,6 @@ class _OpcionesState extends State<Opciones> {
                 setState(
                   () {
                     selectedIndex = position;
-                    // widget.selectedPosition = position;
                   },
                 );
               },

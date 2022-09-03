@@ -62,28 +62,21 @@ class _QuestionsPageViewState extends State<QuestionsPageView> {
 
                   return Container(
                     child: Padding(
-                      padding: const EdgeInsets.symmetric(
-                          horizontal: 18.0, vertical: 12),
+                      padding: const EdgeInsets.symmetric(horizontal: 18.0, vertical: 12),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           SizedBox(
                             height: 10,
                           ),
-                          Text(
-                            'Question ${index + 1}',
-                            style: TextStyle( color: Colors.yellow[800]),
+                          Text('Pregunta ${index + 1}',
+                            style: TextStyle( color: Colors.black),
                           ),
-                          SizedBox(
-                            height: 15,
+                          SizedBox(height: 15,),
+                          Text('${widget.results.elementAt(index).question}',
+                            style: TextStyle(fontSize: 23),
                           ),
-                          Text(
-                            '${widget.results.elementAt(index).question}',
-                            style: TextStyle(fontSize: 20),
-                          ),
-                          SizedBox(
-                            height: 20,
-                          ),
+                          SizedBox(height: 20,),
                           Opciones(
                             index: index,
                             wrongRightList: widget.wrongRightList,
@@ -95,9 +88,7 @@ class _QuestionsPageViewState extends State<QuestionsPageView> {
                               print(_userAnswerList.toList().toString());
                             },
                           ),
-                          SizedBox(
-                            height: 60,
-                          )
+                          SizedBox(height: 60,)
                         ],
                       ),
                     ),
@@ -116,10 +107,7 @@ class _QuestionsPageViewState extends State<QuestionsPageView> {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     mainAxisSize: MainAxisSize.max,
                     children: [
-                      TextButton(
-                        style: ElevatedButton.styleFrom(
-                          padding: EdgeInsets.all(20),
-                        ),
+                      TextButton(style: ElevatedButton.styleFrom(padding: EdgeInsets.all(20),),
                         onPressed: () {
                           _controller.animateToPage(
                             currentPagePosition == 0
@@ -129,10 +117,9 @@ class _QuestionsPageViewState extends State<QuestionsPageView> {
                             curve: Curves.easeIn,
                           );
                         },
-                        child: Text(
-                          'Previous',
+                        child: Text('ANTERIOR',
                           style: TextStyle(
-                              fontSize: 15,
+                              fontSize: 13,
                               color: Colors.yellow[800]),
                         ),
                       ),
@@ -150,10 +137,10 @@ class _QuestionsPageViewState extends State<QuestionsPageView> {
                               curve: Curves.easeIn);
                         },
                         child: Text(
-                          'Next',
+                          'SIGUIENTE',
                           style: TextStyle(
                               fontWeight: FontWeight.bold,
-                              fontSize: 15,
+                              fontSize: 13,
                               color: Colors.blueGrey[800]),
                         ),
                       ),
@@ -169,22 +156,13 @@ class _QuestionsPageViewState extends State<QuestionsPageView> {
                         fixedSize:
                             Size(MediaQuery.of(context).size.width * 0.7, 50)),
                     onPressed: () {
-                      Navigator.pushAndRemoveUntil(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => Puntuacion(
+                      Navigator.pushAndRemoveUntil(context,
+                          MaterialPageRoute(builder: (context) => Puntuacion(
                               useranswerlist: _userAnswerList,
                               correctanswerlist: correctanswerlist,
-                            ),
-                          ),
-                          (route) => false);
+                            ),),(route) => false);
                     },
-                    child: Text(
-                      'SUBMIT',
-                      style: TextStyle(
-                        fontSize: 17,
-                      ),
-                    ),
+                    child: Text('TERMINAR',style: TextStyle(fontSize: 17),),
                   ),
                 ],
               ),

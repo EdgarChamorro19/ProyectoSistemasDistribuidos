@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:trivia_app/Api/ApiTrivia.dart';
-import 'package:trivia_app/Pagina2.dart';
+import 'package:trivia_app/VerPreguntas.dart';
 import 'package:trivia_app/Model/Respuestas.dart';
 import 'package:trivia_app/Model/Preguntas.dart';
 import 'dart:math';
@@ -24,7 +24,6 @@ class _SecondPageState extends State<SecondPage> {
     return Scaffold(
       appBar: AppBar(
         elevation: 0.0,
-        backgroundColor: Colors.transparent,
         centerTitle: true,
         title: const Text('Trivia questions'),
       ),

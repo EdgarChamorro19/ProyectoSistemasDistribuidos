@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:trivia_app/VerPreguntas.dart';
 import 'package:trivia_app/Pagina2.dart';
-import 'package:trivia_app/second_page.dart';
 import 'package:trivia_app/Opciones.dart';
 
 
