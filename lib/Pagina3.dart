@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:trivia_app/Api/ApiTrivia.dart';
+import 'package:trivia_app/Api/ApiTrivia2.dart';
 import 'package:trivia_app/VerPreguntas.dart';
 import 'package:trivia_app/Model/Respuestas.dart';
 import 'package:trivia_app/Model/Preguntas.dart';
@@ -8,16 +8,16 @@ import 'dart:math';
 
 typedef void Randomise(List options);
 
-class Pagina2 extends StatefulWidget {
-  Pagina2({Key? key}) : super(key: key);
+class Pagina3 extends StatefulWidget {
+  Pagina3({Key? key}) : super(key: key);
   List wrongRightList = [];
 
   @override
-  _Pagina2State createState() => _Pagina2State();
+  _Pagina3State createState() => _Pagina3State();
 }
 
-class _Pagina2State extends State<Pagina2> {
-  final ApiTrivia _apitrivia = ApiTrivia();
+class _Pagina3State extends State<Pagina3> {
+  final ApiTrivia2 _apitrivia2 = ApiTrivia2();
 
   @override
   Widget build(BuildContext context) {
@@ -34,7 +34,7 @@ class _Pagina2State extends State<Pagina2> {
 
   _futureWidget() {
     return FutureBuilder(
-      future: _apitrivia.getStates(),
+      future: _apitrivia2.getStates(),
       builder: (context, snapshot) {
         if (snapshot.hasData) {
           List results = snapshot.data as List;

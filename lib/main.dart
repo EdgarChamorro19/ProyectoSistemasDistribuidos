@@ -35,17 +35,20 @@ class _InicioState extends State<Inicio> {
           children: <Widget> [
             Flexible(
               child: Container(
+                width: MediaQuery.of(context).size.width * 0.9,
                 margin: const EdgeInsets.symmetric(horizontal:20 ,vertical:50),
                 child: Image.asset("imagenes/img4.png",height: 325,),
               ),
             ),
             Container(
+              width: MediaQuery.of(context).size.width * 0.9,
               margin: const EdgeInsets.symmetric(horizontal: 30,vertical: 15),
               child: const Text("Bienvenidos a Nuestra Aplicacion",
                       style: TextStyle(fontWeight: FontWeight.bold, fontSize:30)
                       ),
             ),
             Container(
+              width: MediaQuery.of(context).size.width * 0.9,
               margin: const EdgeInsets.symmetric(horizontal: 30,vertical: 20),
               child: ElevatedButton(
                 style: ElevatedButton.styleFrom(
@@ -57,7 +60,7 @@ class _InicioState extends State<Inicio> {
                 onPressed: (){
                   Navigator.push(context, MaterialPageRoute(builder: (context)=> Principal()));
                 },
-                child: const Text("Jugar",style: TextStyle(fontWeight: FontWeight.bold, fontSize:15)),
+                child: const Text("Jugar",style: TextStyle(fontWeight: FontWeight.bold, fontSize:17)),
               ),
             ),
           ],

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:trivia_app/VerPreguntas.dart';
 import 'package:trivia_app/Pagina2.dart';
+import 'package:trivia_app/Pagina3.dart';
 
 class Pincipalpage extends StatelessWidget {
   const Pincipalpage({Key? key}) : super(key: key);
@@ -27,16 +28,12 @@ class _PrincipalState extends State<Principal> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-        minimum: const EdgeInsets.symmetric(vertical: 10),
+        minimum: const EdgeInsets.symmetric(vertical: 110, horizontal: 45),
         child: Column(
           children: <Widget> [
-            Flexible(
-              child: Container(
-                margin: EdgeInsets.symmetric(horizontal:20 ,vertical:50),
-                child: Image.asset("imagenes/img4.png",height: 325,),
-              ),
-            ),
             Container(
+              width: MediaQuery.of(context).size.width * 0.62,
+              height: MediaQuery.of(context).size.height * 0.3,
               margin: EdgeInsets.symmetric(horizontal: 30,vertical: 20),
               child: ElevatedButton(
                 style: ElevatedButton.styleFrom(
@@ -46,9 +43,26 @@ class _PrincipalState extends State<Principal> {
                   ),
                 ),
                 onPressed: (){
-                  Navigator.push(context, MaterialPageRoute(builder: (context)=> SecondPage()));
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=> Pagina2()));
                 },
-                child: Text("Jugar",style: TextStyle(fontWeight: FontWeight.bold, fontSize:15)),
+                child: Text("Verdadero/Falso",style: TextStyle(fontWeight: FontWeight.bold, fontSize:17)),
+              ),
+            ),
+            Container(
+              width: MediaQuery.of(context).size.width * 0.62,
+              height: MediaQuery.of(context).size.height * 0.3,
+              margin: EdgeInsets.symmetric(horizontal: 30,vertical: 20),
+              child: ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  minimumSize: Size(340, 55),
+                  shape: const RoundedRectangleBorder(
+                    borderRadius: BorderRadius.all(Radius.circular(13))
+                  ),
+                ),
+                onPressed: (){
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=> Pagina3()));
+                },
+                child: Text("Opcion Multiple",style: TextStyle(fontWeight: FontWeight.bold, fontSize:17)),
               ),
             ),
           ],

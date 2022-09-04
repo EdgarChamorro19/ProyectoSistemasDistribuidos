@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:trivia_app/Pagina2.dart';
-
+import 'package:trivia_app/Pagina1.dart';
 
 class Puntuacion extends StatefulWidget {
   final List useranswerlist;
@@ -86,7 +85,7 @@ class _PuntuacionState extends State<Puntuacion> {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => SecondPage(),
+                        builder: (context) => Principal(),
                       ),
                     );
                   },

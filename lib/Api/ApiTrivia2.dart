@@ -5,9 +5,9 @@ import 'package:http/http.dart' as http;
 import 'package:trivia_app/Model/Preguntas.dart';
 import 'package:translator/translator.dart';
 
-class ApiTrivia {
+class ApiTrivia2 {
   Future<List<Results>?> getStates() async {
-    Uri url = Uri.parse("https://opentdb.com/api.php?amount=10&category=29&difficulty=medium&type=multiple");
+    Uri url = Uri.parse("https://opentdb.com/api.php?amount=10&category=18&difficulty=medium&type=boolean");
 
     var response = await http.get(url);
     if (response.statusCode == 200) {
