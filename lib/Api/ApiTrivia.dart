@@ -3,6 +3,7 @@ import 'dart:convert';
 import 'package:trivia_app/Model/Preguntas.dart';
 import 'package:http/http.dart' as http;
 import 'package:trivia_app/Model/Preguntas.dart';
+import 'package:translator/translator.dart';
 
 class ApiTrivia {
   Future<List<Results>?> getStates() async {

@@ -35,10 +35,10 @@ class _PuntuacionState extends State<Puntuacion> {
 
     return Scaffold(
         appBar: AppBar(
+          backgroundColor: Colors.lightBlueAccent,
           elevation: 0.0,
-          backgroundColor: Colors.transparent,
           centerTitle: true,
-          title: Text('Trivia Result'),
+          title: Text('Resultado'),
         ),
         body: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -47,7 +47,7 @@ class _PuntuacionState extends State<Puntuacion> {
               padding: EdgeInsets.all(48),
               decoration: BoxDecoration(
                   shape: BoxShape.circle,
-                  color: Colors.blueGrey[800],
+                  color: Colors.indigoAccent,
                   boxShadow: [
                     BoxShadow(
                       color: Colors.white.withAlpha(60),
@@ -59,15 +59,13 @@ class _PuntuacionState extends State<Puntuacion> {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Center(
-                    child: Text(
-                      "Score",
-                      style: TextStyle(fontSize: 30),
+                    child: Text("Score",
+                      style: TextStyle(fontSize: 30, color: Colors.white),
                     ),
                   ),
                   Center(
-                    child: Text(
-                      '${count} / ${total}',
-                      style: TextStyle(fontSize: 28),
+                    child: Text('${count} / ${total}',
+                      style: TextStyle(fontSize: 28, color: Colors.white),
                     ),
                   ),
                 ],

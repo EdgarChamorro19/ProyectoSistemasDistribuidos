@@ -23,9 +23,10 @@ class _SecondPageState extends State<SecondPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Colors.lightBlueAccent,
         elevation: 0.0,
         centerTitle: true,
-        title: const Text('Trivia questions'),
+        title: const Text('Preguntas',style: TextStyle( color: Colors.white,fontWeight: FontWeight.bold)),
       ),
       body: _futureWidget(),
     );

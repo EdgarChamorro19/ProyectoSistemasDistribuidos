@@ -1,3 +1,5 @@
+import 'package:translator/translator.dart';
+
 class Results {
   String? question;
   String? correct_answer;

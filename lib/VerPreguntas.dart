@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:trivia_app/Opciones.dart';
 import 'package:trivia_app/Puntuacion.dart';
+import 'package:translator/translator.dart';
 
 typedef void OptionSelectedCallback(String option);
 
@@ -73,8 +74,9 @@ class _QuestionsPageViewState extends State<QuestionsPageView> {
                             style: TextStyle( color: Colors.black),
                           ),
                           SizedBox(height: 15,),
-                          Text('${widget.results.elementAt(index).question}',
-                            style: TextStyle(fontSize: 23),
+                          Text("${widget.results.elementAt(index).question}",
+                            style: TextStyle(fontSize: 25,fontWeight: FontWeight.bold),
+                            
                           ),
                           SizedBox(height: 20,),
                           Opciones(
@@ -107,7 +109,15 @@ class _QuestionsPageViewState extends State<QuestionsPageView> {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     mainAxisSize: MainAxisSize.max,
                     children: [
-                      TextButton(style: ElevatedButton.styleFrom(padding: EdgeInsets.all(20),),
+                      ElevatedButton(
+                        style: ElevatedButton.styleFrom(
+                          padding: EdgeInsets.all(20),
+                          primary: Colors.redAccent,
+                          minimumSize: Size(120, 60),
+                          shape: const RoundedRectangleBorder(
+                            borderRadius: BorderRadius.all(Radius.circular(13))
+                          ),
+                          ),
                         onPressed: () {
                           _controller.animateToPage(
                             currentPagePosition == 0
@@ -120,13 +130,16 @@ class _QuestionsPageViewState extends State<QuestionsPageView> {
                         child: Text('ANTERIOR',
                           style: TextStyle(
                               fontSize: 13,
-                              color: Colors.yellow[800]),
+                              color: Colors.white),
                         ),
                       ),
                       ElevatedButton(
                         style: ElevatedButton.styleFrom(
-                          padding: EdgeInsets.all(15),
-                          primary: Colors.yellow[800],
+                          primary: Colors.tealAccent[700],
+                          minimumSize: Size(120, 60),
+                          shape: const RoundedRectangleBorder(
+                            borderRadius: BorderRadius.all(Radius.circular(13))
+                          ),
                         ),
                         onPressed: () {
                           _controller.animateToPage(
@@ -141,7 +154,7 @@ class _QuestionsPageViewState extends State<QuestionsPageView> {
                           style: TextStyle(
                               fontWeight: FontWeight.bold,
                               fontSize: 13,
-                              color: Colors.blueGrey[800]),
+                              color: Colors.white),
                         ),
                       ),
                     ],
@@ -151,10 +164,11 @@ class _QuestionsPageViewState extends State<QuestionsPageView> {
                   ),
                   ElevatedButton(
                     style: ElevatedButton.styleFrom(
-                        padding: EdgeInsets.all(10),
-                        primary: Colors.blueGrey[800],
-                        fixedSize:
-                            Size(MediaQuery.of(context).size.width * 0.7, 50)),
+                      minimumSize: Size(340, 55),
+                      shape: const RoundedRectangleBorder(
+                        borderRadius: BorderRadius.all(Radius.circular(13))
+                      ),
+                    ),
                     onPressed: () {
                       Navigator.pushAndRemoveUntil(context,
                           MaterialPageRoute(builder: (context) => Puntuacion(
@@ -162,7 +176,7 @@ class _QuestionsPageViewState extends State<QuestionsPageView> {
                               correctanswerlist: correctanswerlist,
                             ),),(route) => false);
                     },
-                    child: Text('TERMINAR',style: TextStyle(fontSize: 17),),
+                    child: Text('FINALIZAR',style: TextStyle(fontSize: 17),),
                   ),
                 ],
               ),

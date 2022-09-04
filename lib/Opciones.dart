@@ -45,9 +45,9 @@ class _OpcionesState extends State<Opciones> {
             elevation: 2,
             margin: EdgeInsets.symmetric(vertical: 6),
             child: CheckboxListTile(
-              checkColor: Colors.white,
-              activeColor: Colors.cyan,
-              selectedTileColor: Colors.white,
+              checkColor: Colors.black,
+              activeColor: Colors.white,
+              selectedTileColor: Colors.lightGreenAccent[700],
               selected: selectedIndex == position,
               title: Text(
                   '${widget.wrongRightList[widget.index].elementAt(position)}'),
