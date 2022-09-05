@@ -27,42 +27,48 @@ class _PrincipalState extends State<Principal> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.lightBlueAccent,
+        elevation: 0.0,
+        centerTitle: true,
+        title: const Text('Opciones',style: TextStyle( color: Colors.white,fontWeight: FontWeight.bold)),
+      ),
       body: SafeArea(
-        minimum: const EdgeInsets.symmetric(vertical: 110, horizontal: 45),
+        minimum: const EdgeInsets.symmetric(vertical: 40, horizontal: 45),
         child: Column(
           children: <Widget> [
             Container(
               width: MediaQuery.of(context).size.width * 0.62,
               height: MediaQuery.of(context).size.height * 0.3,
               margin: EdgeInsets.symmetric(horizontal: 30,vertical: 20),
-              child: ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                  minimumSize: Size(340, 55),
-                  shape: const RoundedRectangleBorder(
-                    borderRadius: BorderRadius.all(Radius.circular(13))
-                  ),
-                ),
-                onPressed: (){
+              child: InkWell(
+                onTap: (){
                   Navigator.push(context, MaterialPageRoute(builder: (context)=> Pagina2()));
                 },
-                child: Text("Verdadero/Falso",style: TextStyle(fontWeight: FontWeight.bold, fontSize:17)),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Image.asset("imagenes/img3.png", fit: BoxFit.cover),
+                    Text("Opcion Multiple")
+                  ],
+                ),
               ),
             ),
             Container(
               width: MediaQuery.of(context).size.width * 0.62,
               height: MediaQuery.of(context).size.height * 0.3,
               margin: EdgeInsets.symmetric(horizontal: 30,vertical: 20),
-              child: ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                  minimumSize: Size(340, 55),
-                  shape: const RoundedRectangleBorder(
-                    borderRadius: BorderRadius.all(Radius.circular(13))
-                  ),
-                ),
-                onPressed: (){
-                  Navigator.push(context, MaterialPageRoute(builder: (context)=> Pagina3()));
+               child: InkWell(
+                onTap: (){
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=> Pagina2()));
                 },
-                child: Text("Opcion Multiple",style: TextStyle(fontWeight: FontWeight.bold, fontSize:17)),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Image.asset("imagenes/imginicio.png", fit: BoxFit.cover),
+                    Text("Opcion Multiple"),
+                  ],
+                ),
               ),
             ),
           ],
