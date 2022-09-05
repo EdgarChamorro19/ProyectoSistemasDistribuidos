@@ -41,34 +41,51 @@ class _PrincipalState extends State<Principal> {
               width: MediaQuery.of(context).size.width * 0.62,
               height: MediaQuery.of(context).size.height * 0.3,
               margin: EdgeInsets.symmetric(horizontal: 30,vertical: 20),
-              child: InkWell(
-                onTap: (){
-                  Navigator.push(context, MaterialPageRoute(builder: (context)=> Pagina2()));
-                },
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Image.asset("imagenes/img3.png", fit: BoxFit.cover),
-                    Text("Opcion Multiple")
-                  ],
-                ),
+              child: Material(
+                elevation: 8,
+                borderRadius: BorderRadius.circular(28),
+                clipBehavior: Clip.antiAliasWithSaveLayer,
+                child: InkWell(
+                  splashColor: Colors.cyanAccent,
+                  onTap: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=> Pagina2()));
+                  },
+                  child: Column(
+  
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Image.asset("imagenes/img3.png", fit: BoxFit.cover,),
+                      SizedBox(height: 30),
+                      Text("Opción Multiple",style: TextStyle(fontSize: 16.5 ,color: Colors.black,fontWeight: FontWeight.bold)),
+                      SizedBox(height: 6),
+                    ],
+                  ),
               ),
+              ),     
             ),
             Container(
               width: MediaQuery.of(context).size.width * 0.62,
               height: MediaQuery.of(context).size.height * 0.3,
-              margin: EdgeInsets.symmetric(horizontal: 30,vertical: 20),
-               child: InkWell(
-                onTap: (){
-                  Navigator.push(context, MaterialPageRoute(builder: (context)=> Pagina2()));
-                },
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Image.asset("imagenes/imginicio.png", fit: BoxFit.cover),
-                    Text("Opcion Multiple"),
-                  ],
-                ),
+              margin: EdgeInsets.symmetric(horizontal: 25,vertical: 15),
+              child: Material(
+                elevation: 8,
+                borderRadius: BorderRadius.circular(28),
+                clipBehavior: Clip.antiAliasWithSaveLayer,
+                child: InkWell(
+                  splashColor: Colors.cyanAccent,
+                  onTap: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=> Pagina3()));
+                  },
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Image.asset("imagenes/imginicio.png", fit: BoxFit.cover,height: 100,width: 100,),
+                      SizedBox(height: 30),
+                      Text("Verdadero/Falso",style: TextStyle( fontSize: 16.5 ,color: Colors.black,fontWeight: FontWeight.bold)),
+                      SizedBox(height: 6,),
+                    ],
+                  ),
+              ),
               ),
             ),
           ],

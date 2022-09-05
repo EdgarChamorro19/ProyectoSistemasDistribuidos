@@ -46,7 +46,8 @@ class _PuntuacionState extends State<Puntuacion> {
               padding: EdgeInsets.all(48),
               decoration: BoxDecoration(
                   shape: BoxShape.circle,
-                  color: Colors.indigoAccent,
+                  color: Colors.white,
+                  border: Border.all(color: Colors.cyanAccent, width: 10),
                   boxShadow: [
                     BoxShadow(
                       color: Colors.white.withAlpha(60),
@@ -59,12 +60,12 @@ class _PuntuacionState extends State<Puntuacion> {
                 children: [
                   Center(
                     child: Text("Score",
-                      style: TextStyle(fontSize: 30, color: Colors.white),
+                      style: TextStyle(fontSize: 30, color: Colors.black),
                     ),
                   ),
                   Center(
                     child: Text('${count} / ${total}',
-                      style: TextStyle(fontSize: 28, color: Colors.white),
+                      style: TextStyle(fontSize: 28, color: Colors.black),
                     ),
                   ),
                 ],
@@ -74,12 +75,14 @@ class _PuntuacionState extends State<Puntuacion> {
               height: 90,
             ),
             Container(
-              width: 200,
+              width: 260,
               child: Center(
                 child: ElevatedButton(
                   style: ElevatedButton.styleFrom(
-                    padding: EdgeInsets.all(20),
-                    primary: Colors.blueGrey[800],
+                      minimumSize: Size(340, 55),
+                      shape: const RoundedRectangleBorder(
+                        borderRadius: BorderRadius.all(Radius.circular(13))
+                      ),
                   ),
                   onPressed: () {
                     Navigator.push(
@@ -90,7 +93,7 @@ class _PuntuacionState extends State<Puntuacion> {
                     );
                   },
                   child: Text(
-                    'Retake Test',
+                    'Nuevo Intento',
                     style: TextStyle(fontSize: 20),
                   ),
                 ),
